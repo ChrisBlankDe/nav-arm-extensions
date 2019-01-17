@@ -2,7 +2,6 @@
 Log "Install Choco"
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
-choco install chocolatey
 
 Log "Install 7zip"
 choco install 7zip.install
@@ -22,7 +21,7 @@ choco install firefox
 Log "Install visualstudio2017community"
 choco install visualstudio2017community 
 
-Log "Install Chvisualstudio2017-workload-netweboco"
+Log "Install visualstudio2017-workload-netweb"
 choco install visualstudio2017-workload-netweb
 
 
