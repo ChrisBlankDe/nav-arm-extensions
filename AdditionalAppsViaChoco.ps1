@@ -1,3 +1,12 @@
+#CopyBlock from https://github.com/Microsoft/nav-arm-templates/blob/master/Install-VS2017Community.ps1
+if (!(Test-Path function:Log)) {
+    function Log([string]$line, [string]$color = "Gray") {
+        ("<font color=""$color"">" + [DateTime]::Now.ToString([System.Globalization.DateTimeFormatInfo]::CurrentInfo.ShortTimePattern.replace(":mm",":mm:ss")) + " $line</font>") | Add-Content -Path "c:\demo\status.txt"
+        Write-Host -ForegroundColor $color $line 
+    }
+}
+#EndCopyBlock
+
 #Install Choco
 Log "Install Choco"
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -30,3 +39,5 @@ $Url = "https://probitools.gallerycdn.vsassets.io/extensions/probitools/microsof
 $target = "C:\DOWNLOAD\Microsoft.RdlcDesigner.vsix"
 Start-BitsTransfer -Source $url -Destination $target
 C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\VSIXInstaller.exe /quiet $target
+
+Log "nav-arm-extensions finished" -Color Green
