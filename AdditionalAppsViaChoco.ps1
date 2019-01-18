@@ -39,5 +39,5 @@ $target = "C:\DOWNLOAD\Microsoft.RdlcDesigner.vsix"
 (New-Object System.Net.WebClient).DownloadFile($url, $target)
 $VsixInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VSIXInstaller.exe"
 $Arguments = "/quiet $target"
-start-process $VsixInstaller $Arguments
+start-process $VsixInstaller $Arguments -Wait
 Log "nav-arm-extensions finished" -Color Green
