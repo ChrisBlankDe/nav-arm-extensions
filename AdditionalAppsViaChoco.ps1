@@ -37,6 +37,7 @@ Log "Install Microsoft.RdlcDesigner"
 $Url = "https://probitools.gallerycdn.vsassets.io/extensions/probitools/microsoftrdlcreportdesignerforvisualstudio-18001/14.2/1517419538388/238792/3/Microsoft.RdlcDesigner.vsix"
 $target = "C:\DOWNLOAD\Microsoft.RdlcDesigner.vsix"
 (New-Object System.Net.WebClient).DownloadFile($url, $target)
-C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\VSIXInstaller.exe /quiet $target
-
+$VsixInstaller = "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\VSIXInstaller.exe"
+$Arguments = "/quiet $target"
+start-process $VsixInstaller $Arguments
 Log "nav-arm-extensions finished" -Color Green
