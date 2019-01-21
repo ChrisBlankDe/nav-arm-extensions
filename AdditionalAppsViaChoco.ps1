@@ -42,4 +42,4 @@ Log "Install Microsoft.RdlcDesigner"
 $VsixInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VSIXInstaller"
 $Arguments = "/quiet $Target"
 Start-Process -FilePath $VsixInstaller -ArgumentList $Arguments -Wait
-Log "nav-arm-extensions finished. MOre Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
+Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
