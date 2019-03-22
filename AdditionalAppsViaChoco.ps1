@@ -43,3 +43,14 @@ $VsixInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\
 $Arguments = "/quiet $Target"
 Start-Process -FilePath $VsixInstaller -ArgumentList $Arguments -Wait
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
+
+#Add VSCode Extensions
+Log "Install VSCode Extension: Git Lens"
+code --uninstall-extension eamodio.gitlens
+Log "Install VSCode Extension: CRS AL Language Extension"
+code --uninstall-extension waldo.crs-al-language-extension
+Log "Install VSCode Extension: AL Code Outline"
+code --uninstall-extension andrzejzwierzchowski.al-code-outline
+Log "Install VSCode Extension: PowerShell"
+code --uninstall-extension ms-vscode.PowerShell
+
