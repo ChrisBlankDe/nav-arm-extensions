@@ -55,6 +55,8 @@ Log "Install VSCode Extension: AL Code Outline"
 code --install-extension andrzejzwierzchowski.al-code-outline
 Log "Install VSCode Extension: PowerShell"
 code --install-extension ms-vscode.PowerShell
+Log "Install VSCode Extension: vscode-icons"
+code --install-extension vscode-icons-team.vscode-icons
 
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
 
