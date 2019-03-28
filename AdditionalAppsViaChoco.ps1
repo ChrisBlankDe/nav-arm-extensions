@@ -27,6 +27,9 @@ choco install adobereader
 Log "Install firefox"
 choco install firefox
 
+Log "Install Git"
+choco install git.install
+
 Log "Install visualstudio2017community"
 choco install visualstudio2017community 
 
