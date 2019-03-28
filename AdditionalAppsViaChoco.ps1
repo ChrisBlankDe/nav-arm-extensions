@@ -45,7 +45,6 @@ Log "Install Microsoft.RdlcDesigner"
 $VsixInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VSIXInstaller"
 $Arguments = "/quiet $Target"
 Start-Process -FilePath $VsixInstaller -ArgumentList $Arguments -Wait
-Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
 
 #Add VSCode Extensions
 Log "Install VSCode Extension: Git Lens"
@@ -56,4 +55,6 @@ Log "Install VSCode Extension: AL Code Outline"
 code --install-extension andrzejzwierzchowski.al-code-outline
 Log "Install VSCode Extension: PowerShell"
 code --install-extension ms-vscode.PowerShell
+
+Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
 
