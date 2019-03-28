@@ -46,11 +46,11 @@ Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/
 
 #Add VSCode Extensions
 Log "Install VSCode Extension: Git Lens"
-code --uninstall-extension eamodio.gitlens
+code --install-extension eamodio.gitlens
 Log "Install VSCode Extension: CRS AL Language Extension"
-code --uninstall-extension waldo.crs-al-language-extension
+code --install-extension waldo.crs-al-language-extension
 Log "Install VSCode Extension: AL Code Outline"
-code --uninstall-extension andrzejzwierzchowski.al-code-outline
+code --install-extension andrzejzwierzchowski.al-code-outline
 Log "Install VSCode Extension: PowerShell"
-code --uninstall-extension ms-vscode.PowerShell
+code --install-extension ms-vscode.PowerShell
 
