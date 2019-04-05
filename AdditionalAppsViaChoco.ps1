@@ -86,6 +86,8 @@ Add-VSCodeSetting -Name "breadcrumbs.enabled" -Value $true
 Add-VSCodeSetting -Name "workbench.iconTheme" -Value "vscode-icons"
 Add-VSCodeSetting -Name "workbench.editor.highlightModifiedTabs" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnPaste" -Value $true
+Add-VSCodeSetting -Name "editor.formatOnSave" -Value $true
+Add-VSCodeSetting -Name "files.trimFinalNewlines" -Value $true
 Add-VSCodeSetting -Name "CRS.DisableDefaultAlSnippets" -Value $true
 
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
