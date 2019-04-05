@@ -7,6 +7,29 @@ if (!(Test-Path function:Log)) {
 }
 #EndCopyBlock
 
+function Add-VSCodeSetting {
+  param
+  (
+    [String]
+    [Parameter(Mandatory)]
+    [ValidateNotNull()]
+    $Name,
+    [Object]
+    [Parameter(Mandatory)]
+    $Value
+  )
+  process
+  {
+    $SettingFile = "$env:APPDATA\Code\User\settings.json"
+    New-Item -ItemType Directory -Force -Path (Split-Path -Path $SettingFile) | Out-Null
+    if (-not (Test-Path -Path $SettingFile))
+    {
+      '{}' | Out-File -FilePath $SettingFile -Encoding utf8
+    }
+    get-content -Path $SettingFile -Raw | ConvertFrom-Json | Add-Member -MemberType NoteProperty -Name $name -Value $Value -Force -PassThru | ConvertTo-Json | Set-Content -Path $SettingFile
+  }
+}
+
 #Install Choco
 Log "Install Choco"
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -57,6 +80,13 @@ Log "Install VSCode Extension: PowerShell"
 code --install-extension ms-vscode.PowerShell
 Log "Install VSCode Extension: vscode-icons"
 code --install-extension vscode-icons-team.vscode-icons
+
+Log "Set VSCode Settings"
+Add-VSCodeSetting -Name "breadcrumbs.enabled" -Value $true
+Add-VSCodeSetting -Name "workbench.iconTheme" -Value "vscode-icons"
+Add-VSCodeSetting -Name "workbench.editor.highlightModifiedTabs" -Value $true
+Add-VSCodeSetting -Name "editor.formatOnPaste" -Value $true
+Add-VSCodeSetting -Name "CRS.DisableDefaultAlSnippets" -Value $true
 
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
 
