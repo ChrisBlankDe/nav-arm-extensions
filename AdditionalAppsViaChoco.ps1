@@ -53,6 +53,15 @@ choco install firefox
 Log "Install Git"
 choco install git.install
 
+Log "Install Fiddler"
+choco install fiddler
+
+Log "Install Postman"
+choco install postman
+
+Log "Install Sourcetree"
+choco install sourcetree
+
 Log "Install visualstudio2017community"
 choco install visualstudio2017community 
 
@@ -88,6 +97,7 @@ Add-VSCodeSetting -Name "workbench.editor.highlightModifiedTabs" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnPaste" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnSave" -Value $true
 Add-VSCodeSetting -Name "files.trimFinalNewlines" -Value $true
+Add-VSCodeSetting -Name "al.browser" -Value "Firefox"
 Add-VSCodeSetting -Name "CRS.DisableDefaultAlSnippets" -Value $true
 
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
