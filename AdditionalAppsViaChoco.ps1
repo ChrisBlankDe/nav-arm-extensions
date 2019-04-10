@@ -85,6 +85,8 @@ Log "Install VSCode Extension: CRS AL Language Extension"
 code --install-extension waldo.crs-al-language-extension
 Log "Install VSCode Extension: AL Code Outline"
 code --install-extension andrzejzwierzchowski.al-code-outline
+Log "Install VSCode Extension: AL Variable Helper"
+code --install-extension rasmus.al-var-helper
 Log "Install VSCode Extension: PowerShell"
 code --install-extension ms-vscode.PowerShell
 Log "Install VSCode Extension: vscode-icons"
