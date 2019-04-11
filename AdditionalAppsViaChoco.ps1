@@ -20,6 +20,7 @@ function Add-VSCodeSetting {
   )
   process
   {
+    Log "Set VSCode User Setting '$Name' to '$Value'"
     $SettingFile = "$env:APPDATA\Code\User\settings.json"
     New-Item -ItemType Directory -Force -Path (Split-Path -Path $SettingFile) | Out-Null
     if (-not (Test-Path -Path $SettingFile))
