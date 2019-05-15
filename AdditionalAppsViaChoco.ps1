@@ -92,6 +92,8 @@ Log "Install VSCode Extension: PowerShell"
 code --install-extension ms-vscode.PowerShell
 Log "Install VSCode Extension: vscode-icons"
 code --install-extension vscode-icons-team.vscode-icons
+Log "Install VSCode Extension: Todo Tree"
+code --install-extension gruntfuggly.todo-tree
 
 Log "Set VSCode Settings"
 Add-VSCodeSetting -Name "breadcrumbs.enabled" -Value $true
@@ -102,6 +104,6 @@ Add-VSCodeSetting -Name "editor.formatOnSave" -Value $true
 Add-VSCodeSetting -Name "files.trimFinalNewlines" -Value $true
 Add-VSCodeSetting -Name "al.browser" -Value "Firefox"
 Add-VSCodeSetting -Name "CRS.DisableDefaultAlSnippets" -Value $true
+Add-VSCodeSetting -Name "todo-tree.showCountsInTree" -Value $true
 
 Log "nav-arm-extensions finished. More Infos at https://github.com/ChrisBlankDe/nav-arm-extensions" -Color Green
-
