@@ -96,7 +96,6 @@ Log "Install VSCode Extension: Todo Tree"
 code --install-extension gruntfuggly.todo-tree
 
 Log "Set VSCode Settings"
-Add-VSCodeSetting -Name "breadcrumbs.enabled" -Value $true
 Add-VSCodeSetting -Name "workbench.iconTheme" -Value "vscode-icons"
 Add-VSCodeSetting -Name "workbench.editor.highlightModifiedTabs" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnPaste" -Value $true
