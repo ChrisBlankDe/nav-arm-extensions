@@ -39,17 +39,17 @@ choco feature enable -n allowGlobalConfirmation
 Log "Install 7zip"
 choco install 7zip.install
 
-Log "Install notepadplusplus"
+Log "Install Notepad++"
 choco install notepadplusplus.install --x86
 
-Log "Install multilingualapptoolkit"
+Log "Install MultilingualAppToolkit"
 choco install multilingualapptoolkit
 
-Log "Install adobereader"
+Log "Install AdobeReader"
 choco install adobereader
 
-Log "Install firefox"
-choco install firefox
+Log "Install Chromium"
+choco install chromium
 
 Log "Install Git"
 choco install git.install
@@ -60,13 +60,13 @@ choco install fiddler
 Log "Install Postman"
 choco install postman
 
-Log "Install Sourcetree"
+Log "Install SourceTree"
 choco install sourcetree
 
-Log "Install visualstudio2017community"
+Log "Install Visual Studio 2017 Community"
 choco install visualstudio2017community 
 
-Log "Install visualstudio2017-workload-netweb"
+Log "Install Visual Studio 2017 Workload NetWeb"
 choco install visualstudio2017-workload-netweb
 
 Log "Download Microsoft.RdlcDesigner"
@@ -102,7 +102,7 @@ Add-VSCodeSetting -Name "workbench.editor.highlightModifiedTabs" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnPaste" -Value $true
 Add-VSCodeSetting -Name "editor.formatOnSave" -Value $true
 Add-VSCodeSetting -Name "files.trimFinalNewlines" -Value $true
-Add-VSCodeSetting -Name "al.browser" -Value "Firefox"
+Add-VSCodeSetting -Name "al.browser" -Value "Chrome"
 Add-VSCodeSetting -Name "CRS.DisableDefaultAlSnippets" -Value $true
 Add-VSCodeSetting -Name "todo-tree.showCountsInTree" -Value $true
 
